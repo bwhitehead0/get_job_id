@@ -1,7 +1,6 @@
 name: get_job_id
 description: Easily get the job id of the current job.
 author: bwhitehead0
-inputs:
 outputs:
   job_id:
     description: GitHub Actions Job ID
