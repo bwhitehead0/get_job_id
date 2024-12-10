@@ -1,6 +1,8 @@
 name: get_job_id
 description: Easily get the job id of the current job.
 author: bwhitehead0
+inputs:
+  # need to pass in values we can usually get from the ${{ github.* }} context. these are not available inside the action.
 outputs:
   job_id:
     description: GitHub Actions Job ID
