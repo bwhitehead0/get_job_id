@@ -2,8 +2,7 @@
 
 response=$(curl -L -s \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
+  -H "Authorization: token ${GITHUB_TOKEN}" \
   "${GITHUB_SERVER_URL}/api/v3/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/jobs")
 
 if [ "$(echo "$response" | jq '.jobs')" != "null" ]; then
@@ -11,15 +10,16 @@ if [ "$(echo "$response" | jq '.jobs')" != "null" ]; then
 else
   echo "Error: Unable to retrieve jobs. Please check your inputs and try again."
 fi
-
+TK=${GITHUB_TOKEN}
 echo "DEBUG OUTPUT::::"
 echo "URL: ${GITHUB_SERVER_URL}"
 echo "REPOSITORY: ${GITHUB_REPOSITORY}"
 echo "RUN_ID: ${GITHUB_RUN_ID}"
 echo "JOB: ${GITHUB_JOB}"
+echo "TOKEN: ${TK}"
 
 echo "ENV:::::"
-env
+env | sort
 echo "==================================="
 echo "RESPONSE::::"
 echo "${response}"
