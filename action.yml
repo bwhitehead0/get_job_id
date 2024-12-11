@@ -4,6 +4,7 @@ author: bwhitehead0
 inputs:
   token:
     description: 'The GitHub token'
+    required: true
     # default: ${{ secrets.GITHUB_TOKEN }}
 #   run_id:
 #     description: 'The run ID'
