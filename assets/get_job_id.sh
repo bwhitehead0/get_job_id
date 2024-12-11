@@ -20,3 +20,6 @@ echo "JOB: ${GITHUB_JOB}"
 
 echo "ENV:::::"
 env
+echo "==================================="
+echo "RESPONSE::::"
+echo "${response}"
