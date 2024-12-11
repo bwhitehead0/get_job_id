@@ -2,7 +2,7 @@
 
 response=$(curl -L -s \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: token ${GITHUB_TOKEN}" \
+  -H "Authorization: token ${INPUT_TOKEN}" \
   "${GITHUB_SERVER_URL}/api/v3/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/jobs")
 
 if [ "$(echo "$response" | jq '.jobs')" != "null" ]; then
@@ -10,7 +10,7 @@ if [ "$(echo "$response" | jq '.jobs')" != "null" ]; then
 else
   echo "Error: Unable to retrieve jobs. Please check your inputs and try again."
 fi
-TK=${GITHUB_TOKEN}
+TK=${INPUT_TOKEN}
 echo "DEBUG OUTPUT::::"
 echo "URL: ${GITHUB_SERVER_URL}"
 echo "REPOSITORY: ${GITHUB_REPOSITORY}"
