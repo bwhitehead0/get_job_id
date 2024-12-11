@@ -1,24 +1,6 @@
 name: get_job_id
 description: Easily get the job id of the current job.
 author: bwhitehead0
-inputs:
-  token:
-    description: 'The GitHub token'
-    required: true
-    # default: ${{ secrets.GITHUB_TOKEN }}
-#   run_id:
-#     description: 'The run ID'
-#     default: ${{ github.run_id }}
-#   job:
-#     description: 'The job ID'
-#     default: ${{ github.job }}
-#   repository:
-#     description: 'The repository name'
-#     default: ${{ github.repository }}
-#   server_url:
-#     description: 'The GitHub server URL'
-#     default: ${{ github.server_url }}
-  # need to pass in values we can usually get from the ${{ github.* }} context. these are not available inside the action.
 outputs:
   job_id:
     description: GitHub Actions Job ID
