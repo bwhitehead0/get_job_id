@@ -17,6 +17,7 @@ echo "REPOSITORY: ${GITHUB_REPOSITORY}"
 echo "RUN_ID: ${GITHUB_RUN_ID}"
 echo "JOB: ${GITHUB_JOB}"
 echo "TOKEN: ${TK}"
+echo "TOKEN: ${INPUT_TOKEN}"
 
 echo "ENV:::::"
 env | sort
