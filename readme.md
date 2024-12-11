@@ -4,6 +4,10 @@ This action returns the GitHub Actions Job ID from the running workflow.
 
 The resulting Job ID can be addressed via the GitHub variable `${{ steps.[YOUR_STEP_ID].outputs.job_id }}`
 
+### Requirements
+
+A token will need to be provided via `env` when calling the action.
+
 ## Example
 
 ```yaml
@@ -21,6 +25,8 @@ jobs:
       - name: Get job ID
         id: job_id_test
         uses: bwhitehead0/get_job_id@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run ShellCheck
         uses: bwhitehead0/action-shellcheck@master
       - name: Create link to logs
