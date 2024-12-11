@@ -12,3 +12,6 @@ echo "URL: ${INPUT_SERVER_URL}"
 echo "REPOSITORY: ${INPUT_REPOSITORY}"
 echo "RUN_ID: ${INPUT_RUN_ID}"
 echo "JOB: ${INPUT_JOB}"
+
+echo "ENV:::::"
+env
