@@ -10,17 +10,17 @@ if [ "$(echo "$response" | jq '.jobs')" != "null" ]; then
 else
   echo "Error: Unable to retrieve jobs. Please check your inputs and try again."
 fi
-TK=${GITHUB_TOKEN}
-echo "DEBUG OUTPUT::::"
-echo "URL: ${GITHUB_SERVER_URL}"
-echo "REPOSITORY: ${GITHUB_REPOSITORY}"
-echo "RUN_ID: ${GITHUB_RUN_ID}"
-echo "JOB: ${GITHUB_JOB}"
-echo "TOKEN: ${TK}"
-echo "TOKEN: ${GITHUB_TOKEN}"
+# TK=${GITHUB_TOKEN}
+# echo "DEBUG OUTPUT::::"
+# echo "URL: ${GITHUB_SERVER_URL}"
+# echo "REPOSITORY: ${GITHUB_REPOSITORY}"
+# echo "RUN_ID: ${GITHUB_RUN_ID}"
+# echo "JOB: ${GITHUB_JOB}"
+# echo "TOKEN: ${TK}"
+# echo "TOKEN: ${GITHUB_TOKEN}"
 
-echo "ENV:::::"
-env | sort
-echo "==================================="
-echo "RESPONSE::::"
-echo "${response}"
+# echo "ENV:::::"
+# env | sort
+# echo "==================================="
+# echo "RESPONSE::::"
+# echo "${response}"
