@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Get job ID
         id: job_id_test
-        uses: bwhitehead0/get_job_id@v1
+        uses: bwhitehead0/get_job_id@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run ShellCheck
