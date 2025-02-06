@@ -1,6 +1,11 @@
 name: get_job_id
 description: Easily get the job id of the current job.
 author: bwhitehead0
+inputs:
+  debug:
+    description: Enable debug logging
+    required: false
+    default: 'false'
 outputs:
   job_id:
     description: GitHub Actions Job ID
@@ -10,7 +15,7 @@ runs:
   steps:
     - name: Get Job ID
       id: get_job_id
-      run: ${{ github.action_path }}/assets/get_job_id.sh
+      run: ${{ github.action_path }}/assets/get_job_id.sh -D "${{ inputs.debug }}"
       shell: bash
 
 branding:
