@@ -20,6 +20,7 @@ response=$(curl -L -s \
 
 
 if [ "$DEBUG" = "true" ]; then
+  echo "GITHUB_JOB: $GITHUB_JOB"
   echo echo "Raw response: $response"
 fi
 
