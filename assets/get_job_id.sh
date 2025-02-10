@@ -21,6 +21,7 @@ response=$(curl -L -s \
 
 if [ "$DEBUG" = "true" ]; then
   echo "GITHUB_JOB: $GITHUB_JOB"
+  echo "GITHUB_RUN_ID: $GITHUB_RUN_ID"
   echo echo "Raw response: $response"
 fi
 
